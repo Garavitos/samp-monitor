@@ -1,0 +1,34 @@
+name: SA-MP server monitor
+ 
+on:
+  schedule:
+    # every 15 minutes. GitHub may delay/skip runs slightly under load -
+    # this is a good balance between resolution and reliability.
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}   # lets you also trigger it manually from the Actions tab
+ 
+permissions:
+  contents: write   # needed so the workflow can commit the updated log back to the repo
+ 
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+ 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+ 
+      - name: Query server and append to log
+        run: python monitor_once.py
+ 
+      - name: Commit updated log
+        run: |
+          git config user.name "samp-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add samp_log.csv
+          git diff --cached --quiet || git commit -m "log: server status $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
