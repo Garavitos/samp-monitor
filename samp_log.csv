@@ -39,3 +39,4 @@ timestamp_utc,online,players,maxplayers,ping_ms,hostname,gamemode,weather,worldt
 2026-09-22 10:20:43,True,16,599,162.8,Los Santos Miestelis,LSM 2.0.0 LT,11,7:00,
 2026-09-22 15:05:14,False,,,,,,,,WENT OFFLINE (no query response) - server likely restarting
 2026-09-22 18:51:59,True,44,599,108.6,Los Santos Miestelis,LSM 2.0.0 LT,4,7:00,RECOVERED (was offline last check) - likely restart just finished
+2026-09-22 21:44:46,True,20,599,169.0,Los Santos Miestelis,LSM 2.0.0 LT,2,7:00,DROP 44->20 - likely restart (RR)
