@@ -106,3 +106,4 @@ timestamp_utc,online,players,maxplayers,ping_ms,hostname,gamemode,weather,worldt
 2026-10-04 15:58:56,True,74,599,179.5,Los Santos Miestelis,LSM 2.0.1 LT,6,7:00,
 2026-10-04 19:18:41,True,54,599,185.0,Los Santos Miestelis,LSM 2.0.1 LT,6,7:00,
 2026-10-04 22:24:08,True,12,599,188.1,Los Santos Miestelis,LSM 2.0.1 LT,6,7:00,DROP 54->12 - likely restart (RR)
+2026-10-05 01:05:00,True,7,599,106.4,Los Santos Miestelis,LSM 2.0.1 LT,3,7:00,
